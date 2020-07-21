@@ -5,7 +5,7 @@ ENV MAVEN_OPTS "-Xmx1024m"
 
 #Copy files to container
 RUN mkdir FootGo
-COPY workspace/first-job  /FootGo
+COPY ./workspace/first-job  /FootGo
 RUN cp /FootGo/src/main/resources/application.properties.example /FootGo/src/main/resources/application.properties
 
 #Run mvn 
@@ -19,6 +19,6 @@ RUN mkdir /home/webapp
 WORKDIR /home/webapp
 
 #Copy ROOT.war to WORKDIR
-COPY --from=build /FootGo/target/ROOT.war
+COPY --from=build /FootGo/target .
 WORKDIR /home/webapp
 ENTRYPOINT java -jar ROOT.war

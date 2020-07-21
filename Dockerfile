@@ -5,7 +5,7 @@ ENV MAVEN_OPTS "-Xmx1024m"
 
 #Copy files to container
 RUN mkdir FootGo
-COPY ./workspace/first-job  /FootGo
+COPY . /FootGo
 RUN cp /FootGo/src/main/resources/application.properties.example /FootGo/src/main/resources/application.properties
 
 #Run mvn 

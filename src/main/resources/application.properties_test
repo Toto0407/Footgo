@@ -1,0 +1,20 @@
+# MySQL jdbc connection url.
+nspring.datasource.url=jdbc:mysql://localhost:3306/footgo?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+n# MySQL jdbc driver class name.
+nspring.datasource.driverClassName=com.mysql.cj.jdbc.Driver
+n# MySQL database username and password
+nspring.datasource.username=root
+nspring.datasource.password=root
+n
+n# try to auto create DB MySQL
+nspring.jpa.hibernate.ddl-auto=update
+nspring.jpa.database-platform=org.hibernate.dialect.MySQL57Dialect
+nspring.jpa.generate-ddl=true
+nspring.jpa.show-sql=true
+nspring.mvc.view.prefix: /WEB-INF/jsp/
+nspring.mvc.view.suffix: .jsp
+n
+n#properties for sending mail
+nmailer.userName=test@gmail.com
+nmailer.password=test
+nfootgo.admin.email=test@gmail.comn

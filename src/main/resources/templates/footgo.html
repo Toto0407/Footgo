@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Foot&Go - аматорський турнір з футболу 8 на 8 у м.Львів</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="img/footgo-dark-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hamburger.css">
+    <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body class="main-photo">
+<header>
+    <div class="header-full">
+        <div class="header-first-block">
+            <div class="header-icon">
+                <a href="/"><img class="header-img" src="img/footgo-light-icon.png" alt="wiselogo"></a>
+            </div>
+            <div class="header-null">
+                <a href="javascript:void(0)" class="icon" onclick="myFunction()">
+                    <i class="hamburger fa fa-bars"></i>
+                </a>
+            </div>
+            <div class="header-text">
+                <a href="/signup" th:if="${league.getIsSubmissionOpened() == false}"><p>Реєстрація</p></a>
+                <a href="/results"><p>Результати</p></a>
+                <a href="/gametable"><p>Таблиця</p></a>
+                <a href="/bombardier"><p>Бомбардири</p></a>
+            </div>
+        </div>
+
+    </div>
+    <div id="myLinks">
+        <div th:if="${league.getIsSubmissionOpened() == false}"><a class="link-item" href="/signup">Реєстрація</a></div>
+        <div><a class="link-item" href="/results">Результати</a></div>
+        <div><a class="link-item" href="/gametable">Таблиця</a></div>
+        <div><a class="link-item" href="/bombardier">Бомбардири</a></div>
+    </div>
+</header>
+    <div class="main-head">
+        <div class="main-head-title">
+            <h1>Аматорський турнір з футболу</h1>
+            <div class="main-head-teamlogo">
+                <div th:each="item : ${teamList}" class="main-head-eachteam">
+                    <a th:attr="href=${'/team/' + item.id}">
+                        <img th:attr="src=${item.logoImageUrl}, class=${'light' + ' ' + 'team' + item.id}">
+                        <img th:attr="src=${item.logoImageUrlDark}, class=${'dark' + ' ' + 'team' + item.id}">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-block">
+
+        <div class="main-text">
+            <div class="main-about">
+                <h1>Аматорський турнір з футболу</h1>
+                <p>Новий формат гри 8 на 8</p>
+                <div class="main-about-team-match">
+                    <div class="main-about-team">
+                        <img src="/img/team-icon.png">
+                        <p>10 команд</p>
+                    </div>
+                    <div class="main-about-match">
+                        <img src="/img/soccer-ball.png">
+                        <p>45 матчів</p>
+                    </div>
+                </div>
+                <div class="slogan-button">
+                    <input class="main-input-button" type="button" value="Результати" onclick="location.href='/results'">
+                </div>
+            </div>
+            <div class="main-video">
+                <h1>Footgo League Promo</h1>
+                <iframe src="https://www.youtube.com/embed/re-1-nt0tdY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+    <div class="main-where-when">
+        <div class="main-where">
+            <h1>Місце проведення</h1>
+            <p>Львів, вул. Патона 1, стадіон "Сокіл"</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3362.3723090122853!2d23.956577636589127!3d49.82196466835055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae7416a9b3179%3A0x5be70be9b04dfcfe!2z0KTQmiDCq9Cb0YzQstGW0LLCuw!5e0!3m2!1suk!2sua!4v1570803328905!5m2!1suk!2sua"  frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+
+        <div class="main-when">
+            <h1>Час проведення</h1>
+            <div class="main-when-gametime">
+                <p class="main-when-time">19:45</p>
+                <p>або</p>
+                <p class="main-when-time">20:45</p>
+            </div>
+            <ul>
+                <li>Пн</li>
+                <li>Вт</li>
+                <li>Ср</li>
+                <li><span>Чт</span></li>
+                <li>Пт</li>
+                <li>Сб</li>
+                <li>Нд</li>
+            </ul>
+            <ul>
+                <li>Пн</li>
+                <li>Вт</li>
+                <li>Ср</li>
+                <li><span>Чт</span></li>
+                <li>Пт</li>
+                <li>Сб</li>
+                <li>Нд</li>
+            </ul>
+            <ul>
+                <li>Пн</li>
+                <li>Вт</li>
+                <li>Ср</li>
+                <li><span>Чт</span></li>
+                <li>Пт</li>
+                <li>Сб</li>
+                <li>Нд</li>
+            </ul>
+            <ul>
+                <li>Пн</li>
+                <li>Вт</li>
+                <li>Ср</li>
+                <li><span>Чт</span></li>
+                <li>Пт</li>
+                <li>Сб</li>
+                <li>Нд</li>
+            </ul>
+            <ul>
+                <li>Пн</li>
+                <li>Вт</li>
+                <li><span>Ср</span></li>
+                <li>Чт</li>
+                <li>Пт</li>
+                <li>Сб</li>
+                <li>Нд</li>
+            </ul>
+            <p>Ігри проводяться раз в тиждень, середу або четвер о 19:45 або 20:45</p>
+        </div>
+    </div>
+</div>
+
+<script src="signUpScript.js"></script>
+<script src="hamburger.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-39722519-3"></script>
+<script src="/imgPlaceholderSetScript.js" type="text/javascript"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-39722519-3');
+</script>
+
+</body>
+</html>

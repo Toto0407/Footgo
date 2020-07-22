@@ -2,7 +2,7 @@
 FROM maven:3.6.3-openjdk as build
 MAINTAINER Yurii Bakhur "yurabahur@gmail.com"
 ENV MAVEN_OPTS "-Xmx1024m"
-#Test4
+#Test5
 #Copy files to container
 RUN mkdir FootGo
 COPY . /FootGo

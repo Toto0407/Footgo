@@ -7,8 +7,8 @@ services:
     environment:
       MYSQL_DATABASE: 'footgo'
       MYSQL_USER: 'root'
-      MYSQL_PASSWORD: 'pwd'
-      MYSQL_ROOT_PASSWORD: 'pwd'
+      MYSQL_PASSWORD: 'edvIT300!'
+      MYSQL_ROOT_PASSWORD: 'edvIT300!'
     ports:
       - '3306:3306'
     expose:
@@ -18,6 +18,7 @@ services:
      container_name: application
      environment:
        SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/footgo?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+       SPRING_DATASOURCE_PASSWORD: 'edvIT300!'
      ports:
       - '8080:8080'
      expose:

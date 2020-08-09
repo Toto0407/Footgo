@@ -2,8 +2,8 @@
 import boto3
 import os
 os.environ['AWS_DEFAULT_REGION'] = 'eu-west-2'
-os.environ['AWS_ACCESS_KEY_ID'] = 'AKIA5RC4NBGT7CGIGFQJ'
-os.environ['AWS_SECRET_ACCESS_KEY'] = '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'
+os.environ['AWS_ACCESS_KEY_ID'] = 'AKIA5RC4NBGTUTG44Y6U'
+os.environ['AWS_SECRET_ACCESS_KEY'] = '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'
 
 client = boto3.client('rds')
 instances = client.describe_db_instances(DBInstanceIdentifier='footgo')
